@@ -2,6 +2,7 @@
 #define __DEFINE__
 
 #include <iostream>
+#include <cstdlib>
 //#include <conio.h>
 #include "String.h"
 #include "Exception.h"

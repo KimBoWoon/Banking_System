@@ -11,7 +11,7 @@ int main()
 		while (true)
 		{
 			ah.MenuView();
-			scanf("%c", &Menu);
+			cin >> Menu;
 			cout << endl;
 
 			switch (Menu)
