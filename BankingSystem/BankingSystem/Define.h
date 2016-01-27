@@ -2,9 +2,11 @@
 #define __DEFINE__
 
 #include <iostream>
-#include <conio.h>
+//#include <conio.h>
 #include "String.h"
 #include "Exception.h"
 using namespace std;
+
+#pragma warning(disable:4996)
 
 #endif

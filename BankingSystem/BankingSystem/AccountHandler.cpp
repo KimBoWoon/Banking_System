@@ -16,7 +16,7 @@ void AccountHandler::MakeAccount()
 
 	while (true)
 	{
-		chioce = _getch();
+		scanf("%c", &chioce);
 		cout << endl;
 
 		if (chioce == '1')
