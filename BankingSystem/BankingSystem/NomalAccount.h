@@ -10,7 +10,7 @@ private:
 	int InterRate;
 public:
 	//NomalAccount(char* n, int Account, int rate, int money = 0) : Account(n, Account, money), InterRate(rate)	{}
-	NomalAccount(String n, int Account, int rate, int money = 0) : Account(n, Account, money), InterRate(rate)	{}
+	NomalAccount(String n, int account, int rate, int money = 0) : Account(n, account, money), InterRate(rate)	{}
 
 	virtual void Deposit(int money)
 	{

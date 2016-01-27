@@ -4,12 +4,12 @@ String::String() : str(NULL), len(0)	{}
 String::String(const char* s) : len(strlen(s) + 1)
 {
 	str = new char[len];
-	strcpy_s(str, sizeof(char) * len, s);
+	strcpy(str, s);
 }
 String::String(const String& s) : len(s.len)
 {
 	str = new char[len];
-	strcpy_s(str, sizeof(char) * len, s.str);
+	strcpy(str, s.str);
 }
 String::~String()
 {
@@ -22,8 +22,8 @@ String String::operator+ (const String& s) const
 	String temp;
 	temp.len = len + s.len;
 	temp.str = new char[temp.len - 1];
-	strcpy_s(temp.str, sizeof(char) * len, str);
-	strcat_s(temp.str, sizeof(char) * s.len, s.str);
+	strcpy(temp.str, str);
+	strcat(temp.str, s.str);
 	return temp;
 }
 String String::operator+= (const String& s)
@@ -31,8 +31,8 @@ String String::operator+= (const String& s)
 	String temp;
 	temp.len = len + s.len;
 	temp.str = new char[temp.len - 1];
-	strcpy_s(temp.str, sizeof(char) * len, str);
-	strcat_s(temp.str, sizeof(char) * s.len, s.str);
+	strcpy(temp.str, str);
+	strcat(temp.str, s.str);
 	if (str != NULL)
 		delete[]str;
 	str = NULL;
@@ -45,7 +45,7 @@ String& String::operator= (const String& s)
 		delete[]str;
 	len = s.len;
 	str = new char[len];
-	strcpy_s(str, sizeof(char) * len, s.str);
+	strcpy(str, s.str);
 	return *this;
 }
 

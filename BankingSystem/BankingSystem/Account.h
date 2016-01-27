@@ -12,7 +12,7 @@ private:
 	friend class AccountHandler;
 public:
 	//Account(char* n, int Account, int money = 0);
-	Account(String n, int Account, int money = 0);
+	Account(String n, int account, int money = 0);
 	//Account(const Account &p);
 	//~Account();
 
