@@ -2,13 +2,11 @@ language: cpp
 
 compiler: g++
 
-script: g++ -o test BankingSystem/BankingSystem/Account.cpp
+script: g++ -o test BankingSystem/BankingSystem/BankingSystem.cpp
+    BankingSystem/BankingSystem/Account.cpp
     BankingSystem/BankingSystem/Account.h
     BankingSystem/BankingSystem/AccountHandler.cpp
     BankingSystem/BankingSystem/AccountHandler.h
-    BankingSystem/BankingSystem/BankingSystem.cpp
-#    BankingSystem/BankingSystem/Exception.h
-#    BankingSystem/BankingSystem/Exception.cpp
     BankingSystem/BankingSystem/HighCreditAccount.h
     BankingSystem/BankingSystem/NomalAccount.h
     BankingSystem/BankingSystem/String.cpp
