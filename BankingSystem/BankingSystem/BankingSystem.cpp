@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 #include "AccountHandler.h"
 #include "Exception.h"
 
 #pragma warning(disable:4996)
+=======
+#include "Define.h"
+#include "AccountHandler.h"
+>>>>>>> origin/master
 
 int main()
 {
@@ -13,7 +18,7 @@ int main()
 		while (true)
 		{
 			ah.MenuView();
-			scanf("%c", &Menu);
+			cin >> Menu;
 			cout << endl;
 
 			switch (Menu)

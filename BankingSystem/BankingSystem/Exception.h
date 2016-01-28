@@ -1,4 +1,4 @@
-#ifndef __EXCEPTION__
+//#ifndef __EXCEPTION__
 #define __EXCEPTION__
 
 #include "String.h"
@@ -16,4 +16,4 @@ public:
 	//void MeunNumberException();
 };
 
-#endif
+//#endif

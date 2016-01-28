@@ -33,24 +33,24 @@ Account::Account(String n, int account, int money) : Next(NULL)
 void Account::Deposit(int money)
 {
 	if (money < 0)
-		throw Exception("ÀÔ(Ãâ)±Ý¾×ÀÌ 0º¸´Ù ÀÛÀ» ¼ö ¾ø½À´Ï´Ù!");
+		throw Exception("ï¿½ï¿½(ï¿½ï¿½)ï¿½Ý¾ï¿½ï¿½ï¿½ 0ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½!");
 
 	this->Money += money;
 }
 void Account::Withdraw(int money)
 {
 	if (money < 0)
-		throw Exception("ÀÔ(Ãâ)±Ý¾×ÀÌ 0º¸´Ù ÀÛÀ» ¼ö ¾ø½À´Ï´Ù!");
+		throw Exception("ï¿½ï¿½(ï¿½ï¿½)ï¿½Ý¾ï¿½ï¿½ï¿½ 0ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½!");
 
 	if (money > this->Money)
-		throw Exception("Ãâ±Ý¾×ÀÌ ÇöÀç ÀÜ¾×º¸´Ù Å¬ ¼ö ¾ø½À´Ï´Ù!");
+		throw Exception("ï¿½ï¿½Ý¾ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ü¾×ºï¿½ï¿½ï¿½ Å¬ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½!");
 
 	this->Money -= money;
 }
 
 void Account::Print() const
 {
-	cout << "ÀÌ    ¸§ : " << Name << endl;
-	cout << "°èÁÂ¹øÈ£ : " << AccountNumber << endl;
-	cout << "ÀÜ    ¾× : " << Money << endl;
+	cout << "ï¿½ï¿½    ï¿½ï¿½ : " << Name << endl;
+	cout << "ï¿½ï¿½ï¿½Â¹ï¿½È£ : " << AccountNumber << endl;
+	cout << "ï¿½ï¿½    ï¿½ï¿½ : " << Money << endl;
 }
