@@ -1,4 +1,4 @@
-#include "Account.h"
+﻿#include "Account.h"
 
 Account::Account(String n, int account, int money) : Next(NULL)
 {
@@ -33,24 +33,24 @@ Account::Account(String n, int account, int money) : Next(NULL)
 void Account::Deposit(int money)
 {
 	if (money < 0)
-		throw Exception("��(��)�ݾ��� 0���� ���� �� �����ϴ�!");
+		throw Exception("입(출)금액이 0보다 작을 수 없습니다!");
 
 	this->Money += money;
 }
 void Account::Withdraw(int money)
 {
 	if (money < 0)
-		throw Exception("��(��)�ݾ��� 0���� ���� �� �����ϴ�!");
+		throw Exception("입(출)금액이 0보다 작을 수 없습니다!");
 
 	if (money > this->Money)
-		throw Exception("��ݾ��� ���� �ܾ׺��� Ŭ �� �����ϴ�!");
+		throw Exception("출금액이 현재 잔액보다 클 수 없습니다!");
 
 	this->Money -= money;
 }
 
 void Account::Print() const
 {
-	cout << "��    �� : " << Name << endl;
-	cout << "���¹�ȣ : " << AccountNumber << endl;
-	cout << "��    �� : " << Money << endl;
+	cout << "이    름 : " << Name << endl;
+	cout << "계좌번호 : " << AccountNumber << endl;
+	cout << "잔    액 : " << Money << endl;
 }

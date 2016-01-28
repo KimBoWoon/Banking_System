@@ -1,11 +1,8 @@
-//#ifndef __EXCEPTION__
+#ifndef __EXCEPTION__
 #define __EXCEPTION__
 
-<<<<<<< HEAD
-=======
 #include "String.h"
 
->>>>>>> origin/master
 class Exception
 {
 private:
@@ -19,4 +16,4 @@ public:
 	//void MeunNumberException();
 };
 
-//#endif
+#endif

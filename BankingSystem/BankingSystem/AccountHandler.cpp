@@ -1,4 +1,4 @@
-#include "AccountHandler.h"
+﻿#include "AccountHandler.h"
 #include "HighCreditAccount.h"
 
 #pragma warning(disable:4996)
@@ -12,9 +12,9 @@ void AccountHandler::MakeAccount()
 	char chioce;
 	Account* NewNode;
 
-	cout << "���� ����" << endl;
-	cout << "1. ���뿹�ݰ��� 2. �ſ�ŷڰ���" << endl;
-	cout << "���� : ";
+	cout << "계좌 선택" << endl;
+	cout << "1. 보통예금계좌 2. 신용신뢰계좌" << endl;
+	cout << "선택 : ";
 
 	while (true)
 	{
@@ -33,8 +33,8 @@ void AccountHandler::MakeAccount()
 		}
 		else
 		{
-			cout << endl << "�߸��� �Է��Դϴ�!" << endl;
-			cout << "�ٽ� �Է��ϼ���!" << endl;
+			cout << endl << "잘못된 입력입니다!" << endl;
+			cout << "다시 입력하세요!" << endl;
 			continue;
 		}
 	}
@@ -52,14 +52,14 @@ Account* AccountHandler::MakeNomalAccount()
 	String Name;
 	int Money, AccountNumber, rate;
 
-	cout << "���뿹�ݰ��� ����" << endl;
-	cout << "��    �� : ";
+	cout << "보통예금계좌 개설" << endl;
+	cout << "이    름 : ";
 	cin >> Name;
-	cout << "���¹�ȣ : ";
+	cout << "계좌번호 : ";
 	cin >> AccountNumber;
-	cout << "�� �� �� : ";
+	cout << "입 금 액 : ";
 	cin >> Money;
-	cout << "�� �� �� : ";
+	cout << "이 자 율 : ";
 	cin >> rate;
 
 	return new NomalAccount(Name, AccountNumber, rate, Money);
@@ -70,19 +70,19 @@ Account* AccountHandler::MakeHighCreditAccount()
 	String Name;
 	int Money, AccountNumber, rate, specrate;
 
-	cout << "�ſ�ŷڰ��� ����" << endl;
-	cout << "��    �� : ";
+	cout << "신용신뢰계좌 개설" << endl;
+	cout << "이    름 : ";
 	cin >> Name;
-	cout << "���¹�ȣ : ";
+	cout << "계좌번호 : ";
 	cin >> AccountNumber;
-	cout << "�� �� �� : ";
+	cout << "입 금 액 : ";
 	cin >> Money;
-	cout << "�� �� �� : ";
+	cout << "이 자 율 : ";
 	cin >> rate;
 
 	while (true)
 	{
-		cout << "�ſ��� : ";
+		cout << "신용등급 : ";
 		cin >> specrate;
 
 		if (specrate == 1)
@@ -93,8 +93,8 @@ Account* AccountHandler::MakeHighCreditAccount()
 			return new HighCreditAccount(Name, AccountNumber, rate, 2, Money);
 		else
 		{
-			cout << endl << "�߸��� �Է��Դϴ�!" << endl;
-			cout << "�ٽ� �Է��ϼ���!" << endl;
+			cout << endl << "잘못된 입력입니다!" << endl;
+			cout << "다시 입력하세요!" << endl;
 			continue;
 		}
 	}
@@ -103,7 +103,7 @@ void AccountHandler::DepositORWithdraw(char choice)
 {
 	int Account, Money;
 
-	cout << "���¹�ȣ : ";
+	cout << "계좌번호 : ";
 	cin >> Account;
 
 	cur = Head->Next;
@@ -112,7 +112,7 @@ void AccountHandler::DepositORWithdraw(char choice)
 	{
 		if (cur->Next == NULL)
 		{
-			cout << "���� ���� �ʴ� �����Դϴ�!";
+			cout << "존재 하지 않는 정보입니다!";
 			return;
 		}
 		else
@@ -123,17 +123,17 @@ void AccountHandler::DepositORWithdraw(char choice)
 	{
 		if (choice == '2')
 		{
-			cout << "�� �� �� : ";
+			cout << "입 금 액 : ";
 			cin >> Money;
 			cur->Deposit(Money);
-			cout << "�Ա� �Ϸ�" << endl;
+			cout << "입금 완료" << endl;
 		}
 		else if (choice == '3')
 		{
-			cout << "�� �� �� : ";
+			cout << "출 금 액 : ";
 			cin >> Money;
 			cur->Withdraw(Money);
-			cout << "��� �Ϸ�" << endl;
+			cout << "출금 완료" << endl;
 		}
 	}
 	catch (Exception e)
@@ -154,8 +154,8 @@ void AccountHandler::AllPrint()
 }
 void AccountHandler::MenuView() const
 {
-	cout << "1. ���� ����" << endl;
-	cout << "2. ��     ��" << endl;
-	cout << "3. ��     ��" << endl;
-	cout << "4. ��ü�� �ܾ���ȸ" << endl;
+	cout << "1. 계좌 개설" << endl;
+	cout << "2. 입금" << endl;
+	cout << "3. 출금" << endl;
+	cout << "4. 전체고객 잔액조회" << endl;
 }

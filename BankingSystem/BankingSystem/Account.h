@@ -1,14 +1,10 @@
 #ifndef __ACCOUNT__
 #define __ACCOUNT__
 
-<<<<<<< HEAD
 #include "String.h"
 #include "Exception.h"
 
 #pragma warning(disable:4996)
-=======
-#include "Exception.h"
->>>>>>> origin/master
 
 class Account
 {

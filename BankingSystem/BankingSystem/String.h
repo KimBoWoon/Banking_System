@@ -5,6 +5,8 @@
 #include <string.h>
 using namespace std;
 
+#pragma warning(disable:4996)
+
 class String
 {
 private:
