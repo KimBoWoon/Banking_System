@@ -7,7 +7,8 @@ script: g++ -o test BankingSystem/BankingSystem/Account.cpp
     BankingSystem/BankingSystem/AccountHandler.cpp
     BankingSystem/BankingSystem/AccountHandler.h
     BankingSystem/BankingSystem/BankingSystem.cpp
-    BankingSystem/BankingSystem/Exception.h
+#    BankingSystem/BankingSystem/Exception.h
+#    BankingSystem/BankingSystem/Exception.cpp
     BankingSystem/BankingSystem/HighCreditAccount.h
     BankingSystem/BankingSystem/NomalAccount.h
     BankingSystem/BankingSystem/String.cpp

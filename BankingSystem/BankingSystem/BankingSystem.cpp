@@ -1,4 +1,5 @@
 #include "AccountHandler.h"
+#include <cstdlib>
 
 #pragma warning(disable:4996)
 
