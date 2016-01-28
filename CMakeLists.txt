@@ -9,8 +9,8 @@ set(SOURCE_FILES
     BankingSystem/BankingSystem/AccountHandler.cpp
     BankingSystem/BankingSystem/AccountHandler.h
     BankingSystem/BankingSystem/BankingSystem.cpp
-    BankingSystem/BankingSystem/Define.h
-    BankingSystem/BankingSystem/Exception.h
+#    BankingSystem/BankingSystem/Exception.h
+#    BankingSystem/BankingSystem/Exception.cpp
     BankingSystem/BankingSystem/HighCreditAccount.h
     BankingSystem/BankingSystem/NomalAccount.h
     BankingSystem/BankingSystem/String.cpp

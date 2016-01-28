@@ -9,8 +9,6 @@
       <sourceFolder url="file://$MODULE_DIR$/BankingSystem/BankingSystem/String.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/BankingSystem/BankingSystem/String.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/BankingSystem/BankingSystem/AccountHandler.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/BankingSystem/BankingSystem/Exception.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/BankingSystem/BankingSystem/Define.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/BankingSystem/BankingSystem/NomalAccount.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/BankingSystem/BankingSystem/Account.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/BankingSystem/BankingSystem/HighCreditAccount.h" isTestSource="false" />

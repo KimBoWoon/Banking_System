@@ -32,18 +32,18 @@ Account::Account(String n, int account, int money) : Next(NULL)
 
 void Account::Deposit(int money)
 {
-	if (money < 0)
-		throw Exception("입(출)금액이 0보다 작을 수 없습니다!");
+//	if (money < 0)
+//		throw Exception("입(출)금액이 0보다 작을 수 없습니다!");
 
 	this->Money += money;
 }
 void Account::Withdraw(int money)
 {
-	if (money < 0)
-		throw Exception("입(출)금액이 0보다 작을 수 없습니다!");
-
-	if (money > this->Money)
-		throw Exception("출금액이 현재 잔액보다 클 수 없습니다!");
+//	if (money < 0)
+//		throw Exception("입(출)금액이 0보다 작을 수 없습니다!");
+//
+//	if (money > this->Money)
+//		throw Exception("출금액이 현재 잔액보다 클 수 없습니다!");
 
 	this->Money -= money;
 }

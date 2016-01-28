@@ -1,5 +1,4 @@
 #include "AccountHandler.h"
-#include "String.h"
 
 #pragma warning(disable:4996)
 
@@ -8,8 +7,8 @@ int main()
 	char Menu;
 	AccountHandler ah;
 
-	try
-	{
+//	try
+//	{
 		while (true)
 		{
 			ah.MenuView();
@@ -30,6 +29,8 @@ int main()
 			case '4':
 				ah.AllPrint();
 				break;
+			case '5':
+				return 0;
 			default:
 				break;
 			}
@@ -37,9 +38,9 @@ int main()
 			system("pause");
 			system("cls");
 		}
-	}
-	catch (Exception e)
-	{
-		e.ShowExceptionInfo();
-	}
+//	}
+//	catch (Exception e)
+//	{
+//		e.ShowExceptionInfo();
+//	}
 }

@@ -119,8 +119,8 @@ void AccountHandler::DepositORWithdraw(char choice)
 			cur = cur->Next;
 	}
 
-	try
-	{
+//	try
+//	{
 		if (choice == '2')
 		{
 			cout << "입 금 액 : ";
@@ -135,11 +135,11 @@ void AccountHandler::DepositORWithdraw(char choice)
 			cur->Withdraw(Money);
 			cout << "출금 완료" << endl;
 		}
-	}
-	catch (Exception e)
-	{
-		e.ShowExceptionInfo();
-	}
+//	}
+//	catch (Exception e)
+//	{
+//		e.ShowExceptionInfo();
+//	}
 }
 void AccountHandler::AllPrint()
 {
@@ -158,4 +158,5 @@ void AccountHandler::MenuView() const
 	cout << "2. 입금" << endl;
 	cout << "3. 출금" << endl;
 	cout << "4. 전체고객 잔액조회" << endl;
+	cout << "5. 프로그램 종료" << endl;
 }

@@ -8,11 +8,8 @@ class Exception
 private:
 	String s;
 public:
-	Exception(String s) : s(s)	{}
-	void ShowExceptionInfo()
-	{
-		cout << s << endl;
-	}
+	Exception(String s);
+	void ShowExceptionInfo();
 	//void MeunNumberException();
 };
 
