@@ -1,8 +1,8 @@
 #ifndef __NOMAL_ACCOUNT__
 #define __NOMAL_ACCOUNT__
 
-#include "Define.h"
 #include "Account.h"
+#include "String.h"
 
 class NomalAccount : public Account
 {

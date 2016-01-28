@@ -1,5 +1,7 @@
 #include "AccountHandler.h"
-#include "Define.h"
+#include "Exception.h"
+
+#pragma warning(disable:4996)
 
 int main()
 {

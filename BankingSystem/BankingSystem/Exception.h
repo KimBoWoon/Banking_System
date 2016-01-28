@@ -1,7 +1,7 @@
 #ifndef __EXCEPTION__
 #define __EXCEPTION__
 
-#include "Define.h"
+#include "String.h"
 
 class Exception
 {

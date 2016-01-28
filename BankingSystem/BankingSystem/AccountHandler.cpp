@@ -1,6 +1,8 @@
 #include "AccountHandler.h"
 #include "HighCreditAccount.h"
 
+#pragma warning(disable:4996)
+
 AccountHandler::AccountHandler() : Tail(NULL), cur(NULL)
 {
 	Head = new Account("", -1, -1);

@@ -1,7 +1,6 @@
 #ifndef __HIGH_CREDIT_ACCOUNT__
 #define __HIGH_CREDIT_ACCOUNT__
 
-#include "Define.h"
 #include "NomalAccount.h"
 
 class HighCreditAccount : public NomalAccount
