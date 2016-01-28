@@ -1,6 +1,8 @@
 #include "AccountHandler.h"
 #include "HighCreditAccount.h"
 
+#pragma warning(disable:4996)
+
 AccountHandler::AccountHandler() : Tail(NULL), cur(NULL)
 {
 	Head = new Account("", -1, -1);
@@ -10,13 +12,13 @@ void AccountHandler::MakeAccount()
 	char chioce;
 	Account* NewNode;
 
-	cout << "°èÁÂ ¼±ÅÃ" << endl;
-	cout << "1. º¸Åë¿¹±Ý°èÁÂ 2. ½Å¿ë½Å·Ú°èÁÂ" << endl;
-	cout << "¼±ÅÃ : ";
+	cout << "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½" << endl;
+	cout << "1. ï¿½ï¿½ï¿½ë¿¹ï¿½Ý°ï¿½ï¿½ï¿½ 2. ï¿½Å¿ï¿½Å·Ú°ï¿½ï¿½ï¿½" << endl;
+	cout << "ï¿½ï¿½ï¿½ï¿½ : ";
 
 	while (true)
 	{
-		scanf("%c", &chioce);
+		cin >> chioce;
 		cout << endl;
 
 		if (chioce == '1')
@@ -31,8 +33,8 @@ void AccountHandler::MakeAccount()
 		}
 		else
 		{
-			cout << endl << "Àß¸øµÈ ÀÔ·ÂÀÔ´Ï´Ù!" << endl;
-			cout << "´Ù½Ã ÀÔ·ÂÇÏ¼¼¿ä!" << endl;
+			cout << endl << "ï¿½ß¸ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ô´Ï´ï¿½!" << endl;
+			cout << "ï¿½Ù½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½!" << endl;
 			continue;
 		}
 	}
@@ -50,14 +52,14 @@ Account* AccountHandler::MakeNomalAccount()
 	String Name;
 	int Money, AccountNumber, rate;
 
-	cout << "º¸Åë¿¹±Ý°èÁÂ °³¼³" << endl;
-	cout << "ÀÌ    ¸§ : ";
+	cout << "ï¿½ï¿½ï¿½ë¿¹ï¿½Ý°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½" << endl;
+	cout << "ï¿½ï¿½    ï¿½ï¿½ : ";
 	cin >> Name;
-	cout << "°èÁÂ¹øÈ£ : ";
+	cout << "ï¿½ï¿½ï¿½Â¹ï¿½È£ : ";
 	cin >> AccountNumber;
-	cout << "ÀÔ ±Ý ¾× : ";
+	cout << "ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ : ";
 	cin >> Money;
-	cout << "ÀÌ ÀÚ À² : ";
+	cout << "ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ : ";
 	cin >> rate;
 
 	return new NomalAccount(Name, AccountNumber, rate, Money);
@@ -68,19 +70,19 @@ Account* AccountHandler::MakeHighCreditAccount()
 	String Name;
 	int Money, AccountNumber, rate, specrate;
 
-	cout << "½Å¿ë½Å·Ú°èÁÂ °³¼³" << endl;
-	cout << "ÀÌ    ¸§ : ";
+	cout << "ï¿½Å¿ï¿½Å·Ú°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½" << endl;
+	cout << "ï¿½ï¿½    ï¿½ï¿½ : ";
 	cin >> Name;
-	cout << "°èÁÂ¹øÈ£ : ";
+	cout << "ï¿½ï¿½ï¿½Â¹ï¿½È£ : ";
 	cin >> AccountNumber;
-	cout << "ÀÔ ±Ý ¾× : ";
+	cout << "ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ : ";
 	cin >> Money;
-	cout << "ÀÌ ÀÚ À² : ";
+	cout << "ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ : ";
 	cin >> rate;
 
 	while (true)
 	{
-		cout << "½Å¿ëµî±Þ : ";
+		cout << "ï¿½Å¿ï¿½ï¿½ï¿½ : ";
 		cin >> specrate;
 
 		if (specrate == 1)
@@ -91,8 +93,8 @@ Account* AccountHandler::MakeHighCreditAccount()
 			return new HighCreditAccount(Name, AccountNumber, rate, 2, Money);
 		else
 		{
-			cout << endl << "Àß¸øµÈ ÀÔ·ÂÀÔ´Ï´Ù!" << endl;
-			cout << "´Ù½Ã ÀÔ·ÂÇÏ¼¼¿ä!" << endl;
+			cout << endl << "ï¿½ß¸ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ô´Ï´ï¿½!" << endl;
+			cout << "ï¿½Ù½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½!" << endl;
 			continue;
 		}
 	}
@@ -101,7 +103,7 @@ void AccountHandler::DepositORWithdraw(char choice)
 {
 	int Account, Money;
 
-	cout << "°èÁÂ¹øÈ£ : ";
+	cout << "ï¿½ï¿½ï¿½Â¹ï¿½È£ : ";
 	cin >> Account;
 
 	cur = Head->Next;
@@ -110,7 +112,7 @@ void AccountHandler::DepositORWithdraw(char choice)
 	{
 		if (cur->Next == NULL)
 		{
-			cout << "Á¸Àç ÇÏÁö ¾Ê´Â Á¤º¸ÀÔ´Ï´Ù!";
+			cout << "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½!";
 			return;
 		}
 		else
@@ -121,17 +123,17 @@ void AccountHandler::DepositORWithdraw(char choice)
 	{
 		if (choice == '2')
 		{
-			cout << "ÀÔ ±Ý ¾× : ";
+			cout << "ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ : ";
 			cin >> Money;
 			cur->Deposit(Money);
-			cout << "ÀÔ±Ý ¿Ï·á" << endl;
+			cout << "ï¿½Ô±ï¿½ ï¿½Ï·ï¿½" << endl;
 		}
 		else if (choice == '3')
 		{
-			cout << "Ãâ ±Ý ¾× : ";
+			cout << "ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ : ";
 			cin >> Money;
 			cur->Withdraw(Money);
-			cout << "Ãâ±Ý ¿Ï·á" << endl;
+			cout << "ï¿½ï¿½ï¿½ ï¿½Ï·ï¿½" << endl;
 		}
 	}
 	catch (Exception e)
@@ -152,8 +154,8 @@ void AccountHandler::AllPrint()
 }
 void AccountHandler::MenuView() const
 {
-	cout << "1. °èÁÂ °³¼³" << endl;
-	cout << "2. ÀÔ     ±Ý" << endl;
-	cout << "3. Ãâ     ±Ý" << endl;
-	cout << "4. ÀüÃ¼°í°´ ÀÜ¾×Á¶È¸" << endl;
+	cout << "1. ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½" << endl;
+	cout << "2. ï¿½ï¿½     ï¿½ï¿½" << endl;
+	cout << "3. ï¿½ï¿½     ï¿½ï¿½" << endl;
+	cout << "4. ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½Ü¾ï¿½ï¿½ï¿½È¸" << endl;
 }

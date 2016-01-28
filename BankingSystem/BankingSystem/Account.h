@@ -1,10 +1,14 @@
 #ifndef __ACCOUNT__
 #define __ACCOUNT__
 
+<<<<<<< HEAD
 #include "String.h"
 #include "Exception.h"
 
 #pragma warning(disable:4996)
+=======
+#include "Exception.h"
+>>>>>>> origin/master
 
 class Account
 {
@@ -15,7 +19,7 @@ private:
 	friend class AccountHandler;
 public:
 	//Account(char* n, int Account, int money = 0);
-	Account(String n, int Account, int money = 0);
+	Account(String n, int account, int money = 0);
 	//Account(const Account &p);
 	//~Account();
 

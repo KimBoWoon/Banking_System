@@ -2,6 +2,7 @@
 #define __STRING_CLASS__
 
 #include <iostream>
+#include <string.h>
 using namespace std;
 
 class String
