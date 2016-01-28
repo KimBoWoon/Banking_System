@@ -1,7 +1,10 @@
 #ifndef __ACCOUNT__
 #define __ACCOUNT__
 
-#include "Define.h"
+#include "String.h"
+#include "Exception.h"
+
+#pragma warning(disable:4996)
 
 class Account
 {

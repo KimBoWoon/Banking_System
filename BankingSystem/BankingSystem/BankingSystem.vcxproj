@@ -85,7 +85,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AccountHandler.h" />
-    <ClInclude Include="Define.h" />
     <ClInclude Include="Account.h" />
     <ClInclude Include="Exception.h" />
     <ClInclude Include="HighCreditAccount.h" />
